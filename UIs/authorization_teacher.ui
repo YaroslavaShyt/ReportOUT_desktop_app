@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1397</width>
+    <height>900</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string notr="true">Звіт OUT</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../ЗвiтOUT/school.ico</normaloff>../ЗвiтOUT/school.ico</iconset>
+  </property>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>-1</x>
+     <y>-1</y>
+     <width>1400</width>
+     <height>900</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: white;
+QWidget#bgwidget{
+/* Авторизація */
+font-family: 'Istok Web';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 138px;
+
+color: #545050;}</string>
+   </property>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>-100</y>
+      <width>611</width>
+      <height>1021</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 209, 190);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>images/logo.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="bgwidget">
+    <property name="geometry">
+     <rect>
+      <x>920</x>
+      <y>110</y>
+      <width>221</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+font-family: 'Istok Web';
+font-style: normal;
+font-weight: 700;
+font-size: 45px;
+line-height: 138px;
+
+color: #545050;
+
+</string>
+    </property>
+    <property name="text">
+     <string>Увійти як</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>780</y>
+      <width>561</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>images/icons.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>984</x>
+      <y>860</y>
+      <width>51</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family: 'ABeeZee';
+font-style: regular;
+font-weight: 400;
+font-size: 15px;
+color: #999999;
+</string>
+    </property>
+    <property name="text">
+     <string>V.2.0.0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>61</width>
+      <height>901</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 209, 190);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>830</x>
+      <y>740</y>
+      <width>381</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family: 'ABeeZee';
+font-style:italic;
+font-weight: 400;
+font-size: 20px;
+color: rgb(84, 80, 80);
+</string>
+    </property>
+    <property name="text">
+     <string>Навчитися може кожен, вчити – одиниці.</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="settings">
+    <property name="geometry">
+     <rect>
+      <x>1200</x>
+      <y>10</y>
+      <width>181</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 14px;
+border-color: #E4E4E4;
+
+/* Colors/Neutral/Gray 4 */
+background:  #E4E4E4;
+border-radius: 20px;
+
+
+/* ↪ Label */
+
+position: absolute;
+left: 0.1%;
+right: 0%;
+top: 28%;
+bottom: 28%;
+
+font-family: 'ABeeZee';
+font-style: regular;
+font-weight: 400;
+font-size: 20px;
+line-height: 22px;
+/* or 69% */
+display: flex;
+align-items: center;
+text-align: center;
+
+
+
+</string>
+    </property>
+    <property name="text">
+     <string>Налаштування</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>images/settings.ico</normaloff>images/settings.ico</iconset>
+    </property>
+   </widget>
+   <widget class="QLabel" name="bgwidget_3">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>290</y>
+      <width>71</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family: 'Istok Web';
+font-style: normal;
+font-weight: 300;
+font-size: 20px;
+
+
+</string>
+    </property>
+    <property name="text">
+     <string>Пароль</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="password">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>330</y>
+      <width>371</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-size: 25px;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="teacherlogin">
+    <property name="geometry">
+     <rect>
+      <x>830</x>
+      <y>460</y>
+      <width>191</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+border: 14px;
+border-color: #E4E4E4;
+
+/* Colors/Neutral/Gray 4 */
+background:  #E4E4E4;
+border-radius: 25px;
+
+
+/* ↪ Label */
+
+position: absolute;
+left: 0.1%;
+right: 0%;
+top: 28%;
+bottom: 28%;
+
+font-family: 'ABeeZee';
+font-style: regular;
+font-weight: 400;
+font-size: 25px;
+line-height: 22px;
+/* or 69% */
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Colors/Neutral/Gray 3 */
+
+
+</string>
+    </property>
+    <property name="text">
+     <string>Увійти</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="teacherback">
+    <property name="geometry">
+     <rect>
+      <x>1040</x>
+      <y>460</y>
+      <width>191</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+border: 14px;
+border-color: #E4E4E4;
+
+/* Colors/Neutral/Gray 4 */
+background-color: rgb(252, 206, 188);
+border-radius: 25px;
+
+
+/* ↪ Label */
+
+position: absolute;
+left: 0.1%;
+right: 0%;
+top: 28%;
+bottom: 28%;
+
+font-family: 'ABeeZee';
+font-style: regular;
+font-weight: 400;
+font-size: 25px;
+line-height: 22px;
+/* or 69% */
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Colors/Neutral/Gray 3 */
+
+
+</string>
+    </property>
+    <property name="text">
+     <string>На головну</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>images/home.ico</normaloff>images/home.ico</iconset>
+    </property>
+   </widget>
+   <widget class="QLabel" name="wrongpassword">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>400</y>
+      <width>331</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family: 'Istok Web';
+font-style: normal;
+font-weight: 300;
+font-size: 15px;
+
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="bgwidget_2">
+    <property name="geometry">
+     <rect>
+      <x>930</x>
+      <y>170</y>
+      <width>221</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family: 'Istok Web';
+font-style: normal;
+font-weight: 700;
+font-size: 45px;
+line-height: 138px;
+
+color: #545050;
+
+</string>
+    </property>
+    <property name="text">
+     <string>учитель</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

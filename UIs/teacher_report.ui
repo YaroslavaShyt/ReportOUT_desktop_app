@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1397</width>
+    <height>900</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string notr="true">Звіт OUT</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>C:/Users/User/Desktop/PROJECT/ЗвiтOUT/school.ico</normaloff>C:/Users/User/Desktop/PROJECT/ЗвiтOUT/school.ico</iconset>
+  </property>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>-1</x>
+     <y>-1</y>
+     <width>1400</width>
+     <height>900</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: white;
+QWidget#bgwidget{
+/* Авторизація */
+font-family: 'Istok Web';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 138px;
+
+color: #545050;}</string>
+   </property>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>1130</x>
+      <y>40</y>
+      <width>51</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family: 'ABeeZee';
+font-style: regular;
+font-weight: 400;
+font-size: 15px;
+color: #999999;
+</string>
+    </property>
+    <property name="text">
+     <string>V.2.0.0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="wrongpassword">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>400</y>
+      <width>331</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family: 'Istok Web';
+font-style: normal;
+font-weight: 300;
+font-size: 15px;
+
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>-20</x>
+      <y>-10</y>
+      <width>1441</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(248, 248, 248);
+border-radius: 25px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="reports">
+    <property name="geometry">
+     <rect>
+      <x>-10</x>
+      <y>0</y>
+      <width>161</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+border: 14px;
+
+
+background-color:rgb(255, 189, 167);
+font-family: 'ABeeZee';
+font-style: regular;
+font-weight: 500;
+font-size: 25px;
+color: rgb(35, 35, 35);
+
+line-height: 22px;
+/* or 69% */
+display: flex;
+align-items: center;
+text-align: center;
+</string>
+    </property>
+    <property name="text">
+     <string>Звіти</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="print_report">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>0</y>
+      <width>151</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 14px;
+
+background:  #E4E4E4;
+font-family: 'ABeeZee';
+font-style: regular;
+font-weight: 500;
+font-size: 25px;
+color: rgb(35, 35, 35);
+line-height: 22px;
+/* or 69% */
+display: flex;
+align-items: center;
+text-align: center;
+</string>
+    </property>
+    <property name="text">
+     <string>Друк</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="exit">
+    <property name="geometry">
+     <rect>
+      <x>1250</x>
+      <y>0</y>
+      <width>151</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 14px;
+
+
+background-color: rgb(252, 206, 188);
+font-family: 'ABeeZee';
+font-style: regular;
+font-weight: 500;
+font-size: 25px;
+color: rgb(35, 35, 35);
+line-height: 22px;
+/* or 69% */
+display: flex;
+align-items: center;
+text-align: center;
+</string>
+    </property>
+    <property name="text">
+     <string>Вихід</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>C:/Users/User/Desktop/PROJECT/UIs/images/exit.ico</normaloff>C:/Users/User/Desktop/PROJECT/UIs/images/exit.ico</iconset>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="tableWidgetreport">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>140</y>
+      <width>1401</width>
+      <height>761</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 1px solid rgb(252, 206, 188);
+background-color: rgb(248, 248, 248);
+font-size: 15px;
+font-family: 'ABeeZee';
+font-style: regular;
+
+</string>
+    </property>
+    <property name="sortingEnabled">
+     <bool>true</bool>
+    </property>
+    <column>
+     <property name="text">
+      <string>Період</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Рік</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Прізвище</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Ім'я</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>По батькові</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Клас</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string/>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Предмет</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Тип звіту</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>В</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>С</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Д</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Н</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Н.А.</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Прізвища</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Усього</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string/>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string/>
+     </property>
+    </column>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>70</y>
+      <width>121</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family: 'ABeeZee';
+font-style: regular;
+font-weight: 500;
+font-size: 40px;
+color: rgb(35, 35, 35);</string>
+    </property>
+    <property name="text">
+     <string>Звіти</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>80</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family: 'ABeeZee';
+font-style: regular;
+font-weight: 500;
+font-size: 20px;
+color: rgb(35, 35, 35);</string>
+    </property>
+    <property name="text">
+     <string>Фільтрувати за</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="new_rep">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>80</y>
+      <width>171</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 14px;
+border-radius:15px;
+
+background:  #E4E4E4;
+font-family: 'ABeeZee';
+font-style: regular;
+font-weight: 500;
+font-size: 20px;
+color: rgb(35, 35, 35);
+line-height: 22px;
+/* or 69% */
+display: flex;
+align-items: center;
+text-align: center;
+</string>
+    </property>
+    <property name="text">
+     <string>Новий звіт</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>images/new_report.ico</normaloff>images/new_report.ico</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>35</width>
+      <height>35</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="categories">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>81</y>
+      <width>211</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+border: 3px solid rgb(252, 206, 188);
+border-radius: 4 px;
+padding-left: 10px;
+
+font-size: 15px;
+font-family: 'ABeeZee';
+font-style: regular;
+</string>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>10</width>
+      <height>10</height>
+     </size>
+    </property>
+    <item>
+     <property name="text">
+      <string>вчителем</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>предметом</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>класом</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>періодом</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPushButton" name="search_filter">
+    <property name="geometry">
+     <rect>
+      <x>1250</x>
+      <y>80</y>
+      <width>141</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 14px;
+border-radius: 15px;
+background:  #E4E4E4;
+font-family: 'ABeeZee';
+font-style: regular;
+font-weight: 500;
+font-size: 20px;
+color: rgb(35, 35, 35);
+line-height: 22px;
+/* or 69% */
+display: flex;
+align-items: center;
+text-align: center;
+</string>
+    </property>
+    <property name="text">
+     <string>Знайти </string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>images/search.ico</normaloff>images/search.ico</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>35</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="choose_filter">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>80</y>
+      <width>201</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 14px;
+border-radius: 15px;
+background:  #E4E4E4;
+font-family: 'ABeeZee';
+font-style: regular;
+font-weight: 500;
+font-size: 20px;
+color: rgb(35, 35, 35);
+line-height: 22px;
+/* or 69% */
+display: flex;
+align-items: center;
+text-align: center;
+</string>
+    </property>
+    <property name="text">
+     <string>Обрати фільтр</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>images/done.ico</normaloff>images/done.ico</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>25</width>
+      <height>35</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="category_res">
+    <property name="geometry">
+     <rect>
+      <x>950</x>
+      <y>80</y>
+      <width>291</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+border: 3px solid rgb(252, 206, 188);
+border-radius: 4 px;
+padding-left: 10px;
+
+font-size: 15px;
+font-family: 'ABeeZee';
+font-style: regular;
+</string>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>10</width>
+      <height>10</height>
+     </size>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

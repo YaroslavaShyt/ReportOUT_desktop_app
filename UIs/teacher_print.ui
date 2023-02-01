@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1397</width>
+    <height>900</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string notr="true">Звіт OUT</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>C:/Users/User/Desktop/PROJECT/ЗвiтOUT/school.ico</normaloff>C:/Users/User/Desktop/PROJECT/ЗвiтOUT/school.ico</iconset>
+  </property>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>-1</x>
+     <y>-1</y>
+     <width>1400</width>
+     <height>900</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: white;
+QWidget#bgwidget{
+/* Авторизація */
+font-family: 'Istok Web';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 138px;
+
+color: #545050;}</string>
+   </property>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>1130</x>
+      <y>40</y>
+      <width>51</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family: 'ABeeZee';
+font-style: regular;
+font-weight: 400;
+font-size: 15px;
+color: #999999;
+</string>
+    </property>
+    <property name="text">
+     <string>V.2.0.0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>-20</x>
+      <y>-10</y>
+      <width>1441</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(248, 248, 248);
+border-radius: 25px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="report">
+    <property name="geometry">
+     <rect>
+      <x>-10</x>
+      <y>0</y>
+      <width>161</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+border: 14px;
+
+
+background-color: rgb(252, 206, 188);
+font-family: 'ABeeZee';
+font-style: regular;
+font-weight: 500;
+font-size: 25px;
+color: rgb(35, 35, 35);
+
+line-height: 22px;
+/* or 69% */
+display: flex;
+align-items: center;
+text-align: center;
+</string>
+    </property>
+    <property name="text">
+     <string>Звіти</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="adminlogin_5">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>0</y>
+      <width>151</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 14px;
+background: rgb(200, 200, 200);
+font-family: 'ABeeZee';
+font-style: regular;
+font-weight: 500;
+font-size: 25px;
+color: rgb(35, 35, 35);
+line-height: 22px;
+/* or 69% */
+display: flex;
+align-items: center;
+text-align: center;
+</string>
+    </property>
+    <property name="text">
+     <string>Друк</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="exit">
+    <property name="geometry">
+     <rect>
+      <x>1250</x>
+      <y>0</y>
+      <width>151</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 14px;
+
+
+background-color: rgb(252, 206, 188);
+font-family: 'ABeeZee';
+font-style: regular;
+font-weight: 500;
+font-size: 25px;
+color: rgb(35, 35, 35);
+line-height: 22px;
+/* or 69% */
+display: flex;
+align-items: center;
+text-align: center;
+</string>
+    </property>
+    <property name="text">
+     <string>Вихід</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>C:/Users/User/Desktop/PROJECT/UIs/images/exit.ico</normaloff>C:/Users/User/Desktop/PROJECT/UIs/images/exit.ico</iconset>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>70</y>
+      <width>211</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family: 'ABeeZee';
+font-style: regular;
+font-weight: 500;
+font-size: 40px;
+color: rgb(35, 35, 35);</string>
+    </property>
+    <property name="text">
+     <string>Друк звітів</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>170</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family: 'ABeeZee';
+background-color: rgb(239, 239, 239);
+font-style: regular;
+font-weight: 500;
+font-size: 20px;
+color: rgb(35, 35, 35);</string>
+    </property>
+    <property name="text">
+     <string>Предмет</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="cath_sub">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>170</y>
+      <width>281</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+border: 3px solid rgb(252, 206, 188);
+border-radius: 4 px;
+padding-left: 10px;
+
+font-size: 15px;
+font-family: 'ABeeZee';
+font-style: regular;
+</string>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>10</width>
+      <height>10</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="form_cath_report">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>690</y>
+      <width>361</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 14px;
+border-radius: 15px;
+background:  #E4E4E4;
+font-family: 'ABeeZee';
+font-style: regular;
+font-weight: 500;
+font-size: 20px;
+color: rgb(35, 35, 35);
+line-height: 22px;
+/* or 69% */
+display: flex;
+align-items: center;
+text-align: center;
+</string>
+    </property>
+    <property name="text">
+     <string>Сформувати катедральні звіти</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>images/done.ico</normaloff>images/done.ico</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>25</width>
+      <height>35</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="cath_per">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>500</y>
+      <width>281</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+border: 3px solid rgb(252, 206, 188);
+border-radius: 4 px;
+padding-left: 10px;
+
+font-size: 15px;
+font-family: 'ABeeZee';
+font-style: regular;
+</string>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>10</width>
+      <height>10</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>300</y>
+      <width>171</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family: 'ABeeZee';
+background-color: rgb(239, 239, 239);
+font-style: regular;
+font-weight: 500;
+font-size: 20px;
+color: rgb(35, 35, 35);</string>
+    </property>
+    <property name="text">
+     <string>Назва предмета</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>500</y>
+      <width>71</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family: 'ABeeZee';
+background-color: rgb(239, 239, 239);
+font-style: regular;
+font-weight: 500;
+font-size: 20px;
+color: rgb(35, 35, 35);</string>
+    </property>
+    <property name="text">
+     <string>Період</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>340</y>
+      <width>211</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family: 'ABeeZee';
+background-color: rgb(239, 239, 239);
+font-style: regular;
+font-weight: 500;
+font-size: 20px;
+color: rgb(35, 35, 35);</string>
+    </property>
+    <property name="text">
+     <string>в родовому відмінку</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="cath_sub_title">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>330</y>
+      <width>281</width>
+      <height>41</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="teach_teacher">
+    <property name="geometry">
+     <rect>
+      <x>980</x>
+      <y>160</y>
+      <width>281</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+border: 3px solid rgb(252, 206, 188);
+border-radius: 4 px;
+padding-left: 10px;
+
+font-size: 15px;
+font-family: 'ABeeZee';
+font-style: regular;
+</string>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>10</width>
+      <height>10</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="teach_sub">
+    <property name="geometry">
+     <rect>
+      <x>980</x>
+      <y>240</y>
+      <width>281</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+border: 3px solid rgb(252, 206, 188);
+border-radius: 4 px;
+padding-left: 10px;
+
+font-size: 15px;
+font-family: 'ABeeZee';
+font-style: regular;
+</string>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>10</width>
+      <height>10</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="teach_sub_title">
+    <property name="geometry">
+     <rect>
+      <x>980</x>
+      <y>320</y>
+      <width>281</width>
+      <height>41</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="teach_rep_type">
+    <property name="geometry">
+     <rect>
+      <x>980</x>
+      <y>430</y>
+      <width>281</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+border: 3px solid rgb(252, 206, 188);
+border-radius: 4 px;
+padding-left: 10px;
+
+font-size: 15px;
+font-family: 'ABeeZee';
+font-style: regular;
+</string>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>10</width>
+      <height>10</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="teach_period">
+    <property name="geometry">
+     <rect>
+      <x>980</x>
+      <y>530</y>
+      <width>281</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+border: 3px solid rgb(252, 206, 188);
+border-radius: 4 px;
+padding-left: 10px;
+
+font-size: 15px;
+font-family: 'ABeeZee';
+font-style: regular;
+</string>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>10</width>
+      <height>10</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>160</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family: 'ABeeZee';
+background-color: rgb(239, 239, 239);
+font-style: regular;
+font-weight: 500;
+font-size: 20px;
+color: rgb(35, 35, 35);</string>
+    </property>
+    <property name="text">
+     <string>Вчитель</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>240</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family: 'ABeeZee';
+background-color: rgb(239, 239, 239);
+font-style: regular;
+font-weight: 500;
+font-size: 20px;
+color: rgb(35, 35, 35);</string>
+    </property>
+    <property name="text">
+     <string>Предмет</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>310</y>
+      <width>171</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family: 'ABeeZee';
+background-color: rgb(239, 239, 239);
+font-style: regular;
+font-weight: 500;
+font-size: 20px;
+color: rgb(35, 35, 35);</string>
+    </property>
+    <property name="text">
+     <string>Назва предмету</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>340</y>
+      <width>211</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family: 'ABeeZee';
+background-color: rgb(238, 238, 238);
+font-style: regular;
+font-weight: 500;
+font-size: 20px;
+color: rgb(35, 35, 35);</string>
+    </property>
+    <property name="text">
+     <string>в родовому відмінку</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_12">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>430</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family: 'ABeeZee';
+background-color: rgb(239, 239, 239);
+font-style: regular;
+font-weight: 500;
+font-size: 20px;
+color: rgb(35, 35, 35);</string>
+    </property>
+    <property name="text">
+     <string>Вид звіту</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_13">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>530</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family: 'ABeeZee';
+background-color: rgb(239, 239, 239);
+font-style: regular;
+font-weight: 500;
+font-size: 20px;
+color: rgb(35, 35, 35);</string>
+    </property>
+    <property name="text">
+     <string>Період</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="form_teacher_report">
+    <property name="geometry">
+     <rect>
+      <x>830</x>
+      <y>690</y>
+      <width>361</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 14px;
+border-radius: 15px;
+background:  #E4E4E4;
+font-family: 'ABeeZee';
+font-style: regular;
+font-weight: 500;
+font-size: 20px;
+color: rgb(35, 35, 35);
+line-height: 22px;
+/* or 69% */
+display: flex;
+align-items: center;
+text-align: center;
+</string>
+    </property>
+    <property name="text">
+     <string>Сформувати вчительські звіти</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>images/done.ico</normaloff>images/done.ico</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>25</width>
+      <height>35</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_14">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>140</y>
+      <width>581</width>
+      <height>511</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(214, 214, 214, 100);
+border-radius: 25px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_15">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>140</y>
+      <width>581</width>
+      <height>511</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(214, 214, 214, 100);
+border-radius: 25px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <zorder>label_15</zorder>
+   <zorder>label_14</zorder>
+   <zorder>label_3</zorder>
+   <zorder>label</zorder>
+   <zorder>report</zorder>
+   <zorder>adminlogin_5</zorder>
+   <zorder>exit</zorder>
+   <zorder>label_2</zorder>
+   <zorder>label_4</zorder>
+   <zorder>cath_sub</zorder>
+   <zorder>form_cath_report</zorder>
+   <zorder>cath_per</zorder>
+   <zorder>label_5</zorder>
+   <zorder>label_6</zorder>
+   <zorder>label_7</zorder>
+   <zorder>cath_sub_title</zorder>
+   <zorder>teach_teacher</zorder>
+   <zorder>teach_sub</zorder>
+   <zorder>teach_sub_title</zorder>
+   <zorder>teach_rep_type</zorder>
+   <zorder>teach_period</zorder>
+   <zorder>label_8</zorder>
+   <zorder>label_9</zorder>
+   <zorder>label_10</zorder>
+   <zorder>label_11</zorder>
+   <zorder>label_12</zorder>
+   <zorder>label_13</zorder>
+   <zorder>form_teacher_report</zorder>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

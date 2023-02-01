@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>297</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Налаштування</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>images/settings.ico</normaloff>images/settings.ico</iconset>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>431</width>
+     <height>311</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>20</y>
+     <width>191</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-family: 'ABeeZee';
+font-weight: 400;
+font-size: 20px;
+
+</string>
+   </property>
+   <property name="text">
+    <string>Введіть код безпеки </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>60</y>
+     <width>281</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-family: 'ABeeZee';
+font-weight: 400;
+font-size: 20px;
+
+</string>
+   </property>
+   <property name="text">
+    <string>для доступу до налаштувань</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="safety_password">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>130</y>
+     <width>271</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-bottom-color: rgb(118, 118, 118);
+font-size: 20px;</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="approve">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>220</y>
+     <width>141</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 14px;
+border-color: #E4E4E4;
+
+/* Colors/Neutral/Gray 4 */
+background:  #E4E4E4;
+border-radius: 20px;
+
+
+/* ↪ Label */
+
+position: absolute;
+left: 0.1%;
+right: 0%;
+top: 28%;
+bottom: 28%;
+
+font-family: 'ABeeZee';
+font-style: regular;
+font-weight: 400;
+font-size: 20px;
+line-height: 22px;
+/* or 69% */
+display: flex;
+align-items: center;
+text-align: center;
+
+
+</string>
+   </property>
+   <property name="text">
+    <string>Підтвердити</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="cancel">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>220</y>
+     <width>141</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 14px;
+border-color: #E4E4E4;
+
+/* Colors/Neutral/Gray 4 */
+background-color: rgb(255, 209, 190);
+border-radius: 20px;
+
+
+/* ↪ Label */
+
+position: absolute;
+left: 0.1%;
+right: 0%;
+top: 28%;
+bottom: 28%;
+
+font-family: 'ABeeZee';
+font-style: regular;
+font-weight: 400;
+font-size: 20px;
+line-height: 22px;
+/* or 69% */
+display: flex;
+align-items: center;
+text-align: center;
+
+/* Colors/Neutral/Gray 3 */
+
+
+</string>
+   </property>
+   <property name="text">
+    <string>Відміна</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="wrong_password">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>180</y>
+     <width>271</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-family: 'ABeeZee';
+font-weight: 400;
+font-size: 20px;
+
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

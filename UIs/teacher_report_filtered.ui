@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1440</width>
+    <height>612</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1441</width>
+     <height>821</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: white;
+QWidget#bgwidget{
+/* Авторизація */
+font-family: 'Istok Web';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 138px;
+
+color: #545050;}</string>
+   </property>
+   <widget class="QLabel" name="wrongpassword">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>400</y>
+      <width>331</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family: 'Istok Web';
+font-style: normal;
+font-weight: 300;
+font-size: 15px;
+
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="tableWidgetfilteredreport">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>130</y>
+      <width>1431</width>
+      <height>761</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 1px solid rgb(252, 206, 188);
+background-color: rgb(248, 248, 248);
+font-size: 15px;
+font-family: 'ABeeZee';
+font-style: regular;
+
+</string>
+    </property>
+    <property name="sortingEnabled">
+     <bool>true</bool>
+    </property>
+    <column>
+     <property name="text">
+      <string>Період</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Рік</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Прізвище</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Ім'я</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>По батькові</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Клас</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string/>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Предмет</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Тип звіту</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>В</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>С</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Д</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Н</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Н.А.</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Прізвища</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Усього</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string/>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string/>
+     </property>
+    </column>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>241</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family: 'ABeeZee';
+font-style: regular;
+font-weight: 500;
+font-size: 40px;
+color: rgb(35, 35, 35);</string>
+    </property>
+    <property name="text">
+     <string>Знайдено за</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="filter_name">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>30</y>
+      <width>221</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family: 'ABeeZee';
+font-style: regular;
+font-weight: 500;
+font-size: 40px;
+color: rgb(35, 35, 35);
+text-align: center;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
