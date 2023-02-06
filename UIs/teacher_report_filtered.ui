@@ -55,7 +55,7 @@ font-size: 15px;
      <string/>
     </property>
    </widget>
-   <widget class="QTableWidget" name="tableWidgetfilteredreport">
+   <widget class="QTableWidget" name="tableWidgetfilter">
     <property name="enabled">
      <bool>true</bool>
     </property>
@@ -157,16 +157,6 @@ font-style: regular;
     <column>
      <property name="text">
       <string>Усього</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string/>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string/>
      </property>
     </column>
    </widget>

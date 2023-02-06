@@ -55,49 +55,50 @@ class TeacherReport(QDialog):
         self.reports = []
         self.data = []
         self.filter = ''
-        self.reports = self.report_queries()
-        self.load_data_report()
+        reports = self.report_queries()
+        self.load_data_report(reports)
         self.choose_filter.clicked.connect(self.load_filter)
         self.search_filter.clicked.connect(self.show_filtered_reports)
         self.new_rep.clicked.connect(self.create_new_report)
         self.print_report.clicked.connect(self.show_print_panel)
 
-    def load_data_report(self):
-        self.tableWidgetreport.setRowCount(len(self.reports))
+    def load_data_report(self, reports):
+        self.tableWidgetreport.setRowCount(len(reports))
         table_row = 0
-        for i in range(len(self.reports)):
+        print(reports)
+        for i in range(len(reports)):
             self.tableWidgetreport.setItem(table_row, 0,
-                                           QtWidgets.QTableWidgetItem(str(self.reports.loc[i]["TITLE"])))
+                                           QtWidgets.QTableWidgetItem(str(reports.loc[i]["TITLE"])))
             self.tableWidgetreport.setItem(table_row, 1,
-                                           QtWidgets.QTableWidgetItem(str(self.reports.loc[i]["YEAR"])))
+                                           QtWidgets.QTableWidgetItem(str(reports.loc[i]["YEAR"])))
             self.tableWidgetreport.setItem(table_row, 2,
-                                           QtWidgets.QTableWidgetItem(self.reports.loc[i]["SURNAME"]))
+                                           QtWidgets.QTableWidgetItem(reports.loc[i]["SURNAME"]))
             self.tableWidgetreport.setItem(table_row, 3,
-                                           QtWidgets.QTableWidgetItem(self.reports.loc[i]["NAME"]))
+                                           QtWidgets.QTableWidgetItem(reports.loc[i]["NAME"]))
             self.tableWidgetreport.setItem(table_row, 4,
-                                           QtWidgets.QTableWidgetItem(self.reports.loc[i]["PATRONIMYC"]))
+                                           QtWidgets.QTableWidgetItem(reports.loc[i]["PATRONIMYC"]))
             self.tableWidgetreport.setItem(table_row, 5,
-                                           QtWidgets.QTableWidgetItem(str(self.reports.loc[i]["NUMBER"])))
+                                           QtWidgets.QTableWidgetItem(str(reports.loc[i]["NUMBER"])))
             self.tableWidgetreport.setItem(table_row, 6,
-                                           QtWidgets.QTableWidgetItem(self.reports.loc[i]["LETTER"]))
+                                           QtWidgets.QTableWidgetItem(reports.loc[i]["LETTER"]))
             self.tableWidgetreport.setItem(table_row, 7,
-                                           QtWidgets.QTableWidgetItem(self.reports.loc[i]["SUBJECT"]))
+                                           QtWidgets.QTableWidgetItem(reports.loc[i]["SUBJECT"]))
             self.tableWidgetreport.setItem(table_row, 8,
-                                           QtWidgets.QTableWidgetItem(self.reports.loc[i]["TYPE_NAME"]))
+                                           QtWidgets.QTableWidgetItem(reports.loc[i]["TYPE_NAME"]))
             self.tableWidgetreport.setItem(table_row, 9,
-                                           QtWidgets.QTableWidgetItem(str(self.reports.loc[i]["STUDENTS_A"])))
+                                           QtWidgets.QTableWidgetItem(str(reports.loc[i]["STUDENTS_A"])))
             self.tableWidgetreport.setItem(table_row, 10,
-                                           QtWidgets.QTableWidgetItem(str(self.reports.loc[i]["STUDENTS_B"])))
+                                           QtWidgets.QTableWidgetItem(str(reports.loc[i]["STUDENTS_B"])))
             self.tableWidgetreport.setItem(table_row, 11,
-                                           QtWidgets.QTableWidgetItem(str(self.reports.loc[i]["STUDENTS_C"])))
+                                           QtWidgets.QTableWidgetItem(str(reports.loc[i]["STUDENTS_C"])))
             self.tableWidgetreport.setItem(table_row, 12,
-                                           QtWidgets.QTableWidgetItem(str(self.reports.loc[i]["STUDENTS_D"])))
+                                           QtWidgets.QTableWidgetItem(str(reports.loc[i]["STUDENTS_D"])))
             self.tableWidgetreport.setItem(table_row, 13,
-                                           QtWidgets.QTableWidgetItem(str(self.reports.loc[i]["N_A"])))
+                                           QtWidgets.QTableWidgetItem(str(reports.loc[i]["N_A"])))
             self.tableWidgetreport.setItem(table_row, 14,
-                                           QtWidgets.QTableWidgetItem(self.reports.loc[i]["NAMES"]))
+                                           QtWidgets.QTableWidgetItem(reports.loc[i]["NAMES"]))
             self.tableWidgetreport.setItem(table_row, 15,
-                                           QtWidgets.QTableWidgetItem(str(self.reports.loc[i]["QUANTITY"])))
+                                           QtWidgets.QTableWidgetItem(str(reports.loc[i]["QUANTITY"])))
             self.btn1 = QPushButton(self.tableWidgetreport)
             icon = QtGui.QIcon()
             icon.addPixmap(QtGui.QPixmap("./UIs/images/trash_bin.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -112,6 +113,7 @@ class TeacherReport(QDialog):
             self.btn2.setIcon(icon)
             self.btn2.setStyleSheet("background-color:#E4E4E4;")
             self.btn2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+            self.btn2.clicked.connect(self.edit_report)
             self.tableWidgetreport.setCellWidget(table_row, 17, self.btn2)
             table_row += 1
         self.reports = []
@@ -193,6 +195,10 @@ class TeacherReport(QDialog):
                 self.category_res.addItem \
                     (f'{types.loc[i]["TYPE_NAME"]}')
 
+    def confirm_delete(self):
+        pop = ConfirmDelete(self)
+        pop.show()
+
     def delete_report(self):
         self.btn1.clicked = self.sender()
         parent = self.btn1.parent()
@@ -209,12 +215,48 @@ class TeacherReport(QDialog):
                               self.tableWidgetreport.item(row, 7).text(),
                               self.tableWidgetreport.item(row, 8).text())
         dbConnection.execute("DELETE FROM REPORT "
-                    "WHERE ID_REPORT_PERIOD = %s AND ID_TEACHER = %s AND "
-                    "ID_CLASS = %s AND ID_SUBJECT = %s AND "
-                    "ID_REPORT_TYPE = %s ", id_data[0], id_data[1], id_data[2], id_data[3], id_data[4])
+                             "WHERE ID_REPORT_PERIOD = %s AND ID_TEACHER = %s AND "
+                             "ID_CLASS = %s AND ID_SUBJECT = %s AND "
+                             "ID_REPORT_TYPE = %s ", id_data[0], id_data[1], id_data[2], id_data[3], id_data[4])
         self.tableWidgetreport.setRowCount(0)
         self.reports = self.report_queries()
         self.load_data_report()
+
+    def show_edit_report(self):
+        pop = EditReport(self)
+        pop.show()
+
+    def edit_report(self):
+        self.btn2.clicked = self.sender()
+        parent = self.btn2.parent()
+        pos = parent.mapToParent(self.btn2.clicked.pos())
+        index = self.tableWidgetreport.indexAt(pos)
+        row = index.row()
+        self.data = [self.tableWidgetreport.item(row, 0).text(),
+                        self.tableWidgetreport.item(row, 1).text(),
+                        self.tableWidgetreport.item(row, 2).text(),
+                        self.tableWidgetreport.item(row, 3).text(),
+                        self.tableWidgetreport.item(row, 4).text(),
+                        self.tableWidgetreport.item(row, 5).text(),
+                        self.tableWidgetreport.item(row, 6).text(),
+                        self.tableWidgetreport.item(row, 7).text(),
+                        self.tableWidgetreport.item(row, 8).text(),
+                        self.tableWidgetreport.item(row, 9).text(),
+                        self.tableWidgetreport.item(row, 10).text(),
+                        self.tableWidgetreport.item(row, 11).text(),
+                        self.tableWidgetreport.item(row, 12).text(),
+                        self.tableWidgetreport.item(row, 13).text(),
+                        self.tableWidgetreport.item(row, 14).text()]
+        self.id_data = define_ids(self.tableWidgetreport.item(row, 0).text(),
+                             self.tableWidgetreport.item(row, 1).text(),
+                             self.tableWidgetreport.item(row, 2).text(),
+                             self.tableWidgetreport.item(row, 3).text(),
+                             self.tableWidgetreport.item(row, 4).text(),
+                             self.tableWidgetreport.item(row, 5).text(),
+                             self.tableWidgetreport.item(row, 6).text(),
+                             self.tableWidgetreport.item(row, 7).text(),
+                             self.tableWidgetreport.item(row, 8).text())
+        self.show_edit_report()
 
 
 class FilteredReports(QDialog):
@@ -222,12 +264,17 @@ class FilteredReports(QDialog):
         super().__init__(parent)
         loadUi("UIs/teacher_report_filtered.ui", self)
         self.setFixedSize(1400, 761)
+        self.setWindowTitle("Звіт OUT|Звіти за фільтром")
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("UIs/images/school.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.setWindowIcon(icon)
         self.filter = filter
         self.data = data
+        self.parent = parent
         self.filter_name.setText(self.filter)
-        set_columns_report(self.tableWidgetfilteredreport)
+        set_columns_report(self.tableWidgetfilter)
         reports = self.find_filtered_reports()
-       # load_data_report(self.tableWidgetfilteredreport, reports)
+        self.load_data_report(reports)
 
     def find_filtered_reports(self):
         result = ''
@@ -304,6 +351,45 @@ class FilteredReports(QDialog):
             "REPORT_TYPE.ID = REPORT.ID_REPORT_TYPE  AND TYPE_NAME = %s",
                 dbConnection, params=[self.data[0:]])
         return result
+
+    def load_data_report(self, reports):
+        self.tableWidgetfilter.setRowCount(len(reports))
+        table_row = 0
+        print(reports)
+        for i in range(len(reports)):
+            self.tableWidgetfilter.setItem(table_row, 0,
+                                           QtWidgets.QTableWidgetItem(str(reports.loc[i]["TITLE"])))
+            self.tableWidgetfilter.setItem(table_row, 1,
+                                           QtWidgets.QTableWidgetItem(str(reports.loc[i]["YEAR"])))
+            self.tableWidgetfilter.setItem(table_row, 2,
+                                           QtWidgets.QTableWidgetItem(reports.loc[i]["SURNAME"]))
+            self.tableWidgetfilter.setItem(table_row, 3,
+                                           QtWidgets.QTableWidgetItem(reports.loc[i]["NAME"]))
+            self.tableWidgetfilter.setItem(table_row, 4,
+                                           QtWidgets.QTableWidgetItem(reports.loc[i]["PATRONIMYC"]))
+            self.tableWidgetfilter.setItem(table_row, 5,
+                                           QtWidgets.QTableWidgetItem(str(reports.loc[i]["NUMBER"])))
+            self.tableWidgetfilter.setItem(table_row, 6,
+                                           QtWidgets.QTableWidgetItem(reports.loc[i]["LETTER"]))
+            self.tableWidgetfilter.setItem(table_row, 7,
+                                           QtWidgets.QTableWidgetItem(reports.loc[i]["SUBJECT"]))
+            self.tableWidgetfilter.setItem(table_row, 8,
+                                           QtWidgets.QTableWidgetItem(reports.loc[i]["TYPE_NAME"]))
+            self.tableWidgetfilter.setItem(table_row, 9,
+                                           QtWidgets.QTableWidgetItem(str(reports.loc[i]["STUDENTS_A"])))
+            self.tableWidgetfilter.setItem(table_row, 10,
+                                           QtWidgets.QTableWidgetItem(str(reports.loc[i]["STUDENTS_B"])))
+            self.tableWidgetfilter.setItem(table_row, 11,
+                                           QtWidgets.QTableWidgetItem(str(reports.loc[i]["STUDENTS_C"])))
+            self.tableWidgetfilter.setItem(table_row, 12,
+                                           QtWidgets.QTableWidgetItem(str(reports.loc[i]["STUDENTS_D"])))
+            self.tableWidgetfilter.setItem(table_row, 13,
+                                           QtWidgets.QTableWidgetItem(str(reports.loc[i]["N_A"])))
+            self.tableWidgetfilter.setItem(table_row, 14,
+                                           QtWidgets.QTableWidgetItem(reports.loc[i]["NAMES"]))
+            self.tableWidgetfilter.setItem(table_row, 15,
+                                           QtWidgets.QTableWidgetItem(str(reports.loc[i]["QUANTITY"])))
+            table_row += 1
 
 
 class NewReport(QDialog):
@@ -412,6 +498,63 @@ class NewReport(QDialog):
             self.parent.reports = self.parent.report_queries()
             self.parent.load_data_report()
             self.close()
+
+
+class EditReport(QDialog):
+    def __init__(self, parent):
+        super().__init__(parent)
+        loadUi("UIs/update_teacher_report.ui", self)
+        self.setFixedSize(806, 580)
+        self.setWindowTitle("Звіт OUT|Редагувати звіт")
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("UIs/images/school.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.setWindowIcon(icon)
+        self.parent = parent
+        self.exit.clicked.connect(self.close)
+        self.save.clicked.connect(self.save_report)
+        self.period.setText(f'{self.parent.data[0]} {self.parent.data[1]}')
+        self.surname.setText(self.parent.data[2])
+        self.name.setText(self.parent.data[3])
+        self.patr.setText(self.parent.data[4])
+        self.classes.setText(f'{self.parent.data[5]} - {self.parent.data[6]}')
+        self.subject.setText(self.parent.data[7])
+        self.report_type.setText(self.parent.data[8])
+        self.a.setText(self.parent.data[9])
+        self.b.setText(self.parent.data[10])
+        self.c.setText(self.parent.data[11])
+        self.d.setText(self.parent.data[12])
+        self.n_a.setText(self.parent.data[13])
+        self.names.setText(self.parent.data[14])
+
+    def save_report(self):
+        students_quantity = int(self.a.text()) + int(self.b.text()) + int(self.c.text()) + int(self.d.text()) + int(self.n_a.text())
+        is_divide = pd.read_sql("SELECT DIVIDE "
+                                "FROM SUBJECT "
+                                "WHERE ID = %s",
+                                dbConnection,
+                                params=[self.parent.id_data[3]]).loc[0]["DIVIDE"]
+        if students_quantity != self.parent.id_data[5] and not is_divide:
+            self.all.setText(f'Загалом: {str(students_quantity)}')
+            self.on_list.setText(f'За списком: {str(self.parent.id_data[5])}')
+        else:
+            dbConnection.execute("UPDATE REPORT "
+                                 "SET STUDENTS_A = %s, "
+                                 "STUDENTS_B = %s, "
+                                 "STUDENTS_C = %s, "
+                                 "STUDENTS_D = %s, "
+                                 "N_A = %s, "
+                                 "NAMES = %s "
+                                 "WHERE ID_REPORT_PERIOD = %s AND ID_TEACHER = %s AND "
+                                 "ID_CLASS = %s AND ID_SUBJECT = %s AND "
+                                 "ID_REPORT_TYPE = %s ",
+                                 self.a.text(), self.b.text(), self.c.text(), self.d.text(), self.n_a.text(), self.names.text(),
+                                 self.parent.id_data[0], self.parent.id_data[1], self.parent.id_data[2],
+                                 self.parent.id_data[3], self.parent.id_data[4])
+            self.parent.tableWidgetreport.setRowCount(0)
+            self.parent.reports = self.parent.report_queries()
+            self.parent.load_data_report()
+            self.close()
+
 
 
 

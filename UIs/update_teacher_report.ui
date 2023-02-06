@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>806</width>
+    <height>580</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 255, 255);</string>
+  </property>
+  <widget class="QPushButton" name="save">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>480</y>
+     <width>141</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 14px;
+border-radius: 15px;
+background:  #E4E4E4;
+font-family: 'ABeeZee';
+font-style: regular;
+font-weight: 500;
+font-size: 20px;
+color: rgb(35, 35, 35);
+line-height: 22px;
+/* or 69% */
+display: flex;
+align-items: center;
+text-align: center;
+</string>
+   </property>
+   <property name="text">
+    <string>Зберегти</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>25</width>
+     <height>35</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="exit">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>480</y>
+     <width>141</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 14px;
+border-radius: 15px;
+background-color: rgb(252, 206, 188);
+font-family: 'ABeeZee';
+font-style: regular;
+font-weight: 500;
+font-size: 20px;
+color: rgb(35, 35, 35);
+line-height: 22px;
+/* or 69% */
+display: flex;
+align-items: center;
+text-align: center;
+</string>
+   </property>
+   <property name="text">
+    <string>Відміна</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>25</width>
+     <height>35</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>191</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-family: 'ABeeZee';
+font-style: regular;
+font-weight: 500;
+font-size: 30px;
+color: rgb(35, 35, 35);</string>
+   </property>
+   <property name="text">
+    <string>Редагування</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="surname">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>90</y>
+     <width>161</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-family: 'ABeeZee';
+font-style: regular;
+font-weight: 500;
+font-size: 22px;
+color: rgb(35, 35, 35);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="name">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>90</y>
+     <width>161</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-family: 'ABeeZee';
+font-style: regular;
+font-weight: 500;
+font-size: 22px;
+color: rgb(35, 35, 35);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="patr">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>90</y>
+     <width>191</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-family: 'ABeeZee';
+font-style: regular;
+font-weight: 500;
+font-size: 22px;
+color: rgb(35, 35, 35);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="subject">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>160</y>
+     <width>301</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-family: 'ABeeZee';
+font-style: regular;
+font-weight: 500;
+font-size: 22px;
+color: rgb(35, 35, 35);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="report_type">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>160</y>
+     <width>231</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-family: 'ABeeZee';
+font-style: regular;
+font-weight: 500;
+font-size: 22px;
+color: rgb(35, 35, 35);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="a">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>260</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-family: 'ABeeZee';
+font-style: regular;
+font-weight: 500;
+font-size: 25px;
+color: rgb(35, 35, 35);</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="subject_2">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>260</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-family: 'ABeeZee';
+font-style: regular;
+font-weight: 500;
+font-size: 25px;
+color: rgb(35, 35, 35);</string>
+   </property>
+   <property name="text">
+    <string>Високий</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="subject_3">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>310</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-family: 'ABeeZee';
+font-style: regular;
+font-weight: 500;
+font-size: 25px;
+color: rgb(35, 35, 35);</string>
+   </property>
+   <property name="text">
+    <string>Середній</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="subject_4">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>360</y>
+     <width>131</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-family: 'ABeeZee';
+font-style: regular;
+font-weight: 500;
+font-size: 25px;
+color: rgb(35, 35, 35);</string>
+   </property>
+   <property name="text">
+    <string>Достатній</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="subject_5">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>410</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-family: 'ABeeZee';
+font-style: regular;
+font-weight: 500;
+font-size: 25px;
+color: rgb(35, 35, 35);</string>
+   </property>
+   <property name="text">
+    <string>Низький</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="b">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>310</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-family: 'ABeeZee';
+font-style: regular;
+font-weight: 500;
+font-size: 25px;
+color: rgb(35, 35, 35);</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="c">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>360</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-family: 'ABeeZee';
+font-style: regular;
+font-weight: 500;
+font-size: 25px;
+color: rgb(35, 35, 35);</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="d">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>410</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-family: 'ABeeZee';
+font-style: regular;
+font-weight: 500;
+font-size: 25px;
+color: rgb(35, 35, 35);</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="subject_6">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>260</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-family: 'ABeeZee';
+font-style: regular;
+font-weight: 500;
+font-size: 25px;
+color: rgb(35, 35, 35);</string>
+   </property>
+   <property name="text">
+    <string>Н/А</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="subject_7">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>320</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-family: 'ABeeZee';
+font-style: regular;
+font-weight: 500;
+font-size: 25px;
+color: rgb(35, 35, 35);</string>
+   </property>
+   <property name="text">
+    <string>Прізвища</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="n_a">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>260</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-family: 'ABeeZee';
+font-style: regular;
+font-weight: 500;
+font-size: 25px;
+color: rgb(35, 35, 35);</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="names">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>310</y>
+     <width>221</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-family: 'ABeeZee';
+font-style: regular;
+font-weight: 500;
+font-size: 25px;
+color: rgb(35, 35, 35);</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="classes">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>160</y>
+     <width>191</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-family: 'ABeeZee';
+font-style: regular;
+font-weight: 500;
+font-size: 22px;
+color: rgb(35, 35, 35);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="period">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>90</y>
+     <width>171</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-family: 'ABeeZee';
+font-style: regular;
+font-weight: 500;
+font-size: 22px;
+color: rgb(35, 35, 35);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="all">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>400</y>
+     <width>191</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-family: 'ABeeZee';
+font-style: regular;
+font-weight: 500;
+font-size: 22px;
+color: rgb(35, 35, 35);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="on_list">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>400</y>
+     <width>211</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-family: 'ABeeZee';
+font-style: regular;
+font-weight: 500;
+font-size: 22px;
+color: rgb(35, 35, 35);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
