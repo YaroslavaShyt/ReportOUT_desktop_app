@@ -65,7 +65,6 @@ class TeacherReport(QDialog):
     def load_data_report(self, reports):
         self.tableWidgetreport.setRowCount(len(reports))
         table_row = 0
-        print(reports)
         for i in range(len(reports)):
             self.tableWidgetreport.setItem(table_row, 0,
                                            QtWidgets.QTableWidgetItem(str(reports.loc[i]["TITLE"])))
@@ -133,7 +132,7 @@ class TeacherReport(QDialog):
         pop = FilteredReports(self, self.filter, self.data)
         pop.show()
 
-    def go_exit(self):  # take to a "setup" file and import
+    def go_exit(self):
         from ZvitOUT import app, sys
         sys.exit(app.exec())
 
@@ -219,8 +218,8 @@ class TeacherReport(QDialog):
                              "ID_CLASS = %s AND ID_SUBJECT = %s AND "
                              "ID_REPORT_TYPE = %s ", id_data[0], id_data[1], id_data[2], id_data[3], id_data[4])
         self.tableWidgetreport.setRowCount(0)
-        self.reports = self.report_queries()
-        self.load_data_report()
+        reports = self.report_queries()
+        self.load_data_report(reports)
 
     def show_edit_report(self):
         pop = EditReport(self)
@@ -263,7 +262,7 @@ class FilteredReports(QDialog):
     def __init__(self, parent, filter, data):
         super().__init__(parent)
         loadUi("UIs/teacher_report_filtered.ui", self)
-        self.setFixedSize(1400, 761)
+        self.setFixedSize(1250, 761)
         self.setWindowTitle("Звіт OUT|Звіти за фільтром")
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("UIs/images/school.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -355,7 +354,6 @@ class FilteredReports(QDialog):
     def load_data_report(self, reports):
         self.tableWidgetfilter.setRowCount(len(reports))
         table_row = 0
-        print(reports)
         for i in range(len(reports)):
             self.tableWidgetfilter.setItem(table_row, 0,
                                            QtWidgets.QTableWidgetItem(str(reports.loc[i]["TITLE"])))
@@ -495,8 +493,8 @@ class NewReport(QDialog):
             df = pd.DataFrame(data=report)
             df.to_sql(con=dbConnection, name="REPORT", if_exists='append', index=False)
             self.parent.tableWidgetreport.setRowCount(0)
-            self.parent.reports = self.parent.report_queries()
-            self.parent.load_data_report()
+            reports = self.parent.report_queries()
+            self.parent.load_data_report(reports)
             self.close()
 
 
@@ -551,8 +549,8 @@ class EditReport(QDialog):
                                  self.parent.id_data[0], self.parent.id_data[1], self.parent.id_data[2],
                                  self.parent.id_data[3], self.parent.id_data[4])
             self.parent.tableWidgetreport.setRowCount(0)
-            self.parent.reports = self.parent.report_queries()
-            self.parent.load_data_report()
+            reports = self.parent.report_queries()
+            self.parent.load_data_report(reports)
             self.close()
 
 
