@@ -5,6 +5,7 @@ from PyQt5.QtWidgets import QPushButton
 from PyQt5.uic import loadUi
 from PyQt5 import QtCore
 from PyQt5 import QtGui
+from import_pdf import *
 
 
 class TeacherPrint(QDialog):
@@ -15,6 +16,8 @@ class TeacherPrint(QDialog):
         self.report.clicked.connect(self.show_teacher_report_panel)
         self.exit.clicked.connect(self.go_exit)
         self.load_filters_data()
+        self.form_cath_report.clicked.connect(self.print_cathedra_report_data)
+        self.form_teacher_report.clicked.connect(self.print_teacher_report_data)
 
     def show_teacher_report_panel(self):
         import teacher_report
@@ -54,3 +57,19 @@ class TeacherPrint(QDialog):
                             "FROM REPORT_TYPE ", dbConnection)
         for i in range(len(types)):
             self.teach_rep_type.addItem(f'{types.loc[i]["TYPE_NAME"]}')
+
+    def print_teacher_report_data(self):
+        teacher = self.teach_teacher.currentText()
+        report_type = self.teach_rep_type.currentText()
+        subject = self.teach_sub.currentText()
+        period = self.teach_period.currentText()
+       # title = self.teach_sub_title.text()
+        getPdfTeacherTable(subject, period, teacher, report_type)
+
+    def print_cathedra_report_data(self):
+        subject = self.cath_sub.currentText()
+        period = self.cath_per.currentText()
+        title = self.cath_sub_title.text()
+        print(period)
+        getPdfAnaliticsTable(subject, period, title)
+        getPdfResultsTable(subject, period, title)
